@@ -9,7 +9,7 @@
     
   App.addInitializer ->
     App.module("FooterApp").start()
-    # App.execute "footer:show"
+    App.module("HeaderApp").start()
     
   App.on "initialize.after", ->
     if Backbone.history
