@@ -7,6 +7,9 @@ gem 'rails', '4.1.5'
 gem 'sqlite3'
 # Webserver
 gem 'thin'
+# JSON sculpting
+
+gem 'oj'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
 # Use Uglifier as compressor for JavaScript assets
@@ -43,3 +46,5 @@ gem 'spring',        group: :development
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
+gem 'gon'
+gem 'rabl'
