@@ -1,5 +1,5 @@
 @Demo.module "HeaderApp", (HeaderApp, App, BAckbone, Marionette, $, _) ->
-  @startWithParent - false
+  @startWithParent = false
   
   API =
     listHeader: ->
@@ -7,3 +7,4 @@
       
   HeaderApp.on "start", ->
     API.listHeader()
+    
