@@ -3,7 +3,7 @@
   List.Controller =
   
     listHeader: ->
-      links = App.request "header:entities"
+      links = Backbone.Radio.request "global", "header:entities"
       window.links = links
       
       headerView = @getHeaderView links

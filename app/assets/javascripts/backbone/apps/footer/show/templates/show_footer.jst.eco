@@ -1,5 +1,5 @@
 <div id="footer">
 	<div class="container">
-		<p class="text-muted">BackboneRails - Episode 5 Creation - George Ayris</p?
+		<p class="text-muted">BackboneRails - Episode 5 Creation - Current User: <%= @first_name%></p>
 	</div>
 </div>
