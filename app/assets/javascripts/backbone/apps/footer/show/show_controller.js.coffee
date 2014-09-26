@@ -3,8 +3,8 @@
 	Show.Controller = 
 		
 		showFooter: ->
-			 @currentUser = App.currentUser #Backbone.Radio.request "global", "get:current:user"
-			 footerView = @getFooterView @currentUser 
+			 currentUser = Backbone.Radio.request "global", "get:current:user"
+			 footerView = @getFooterView currentUser 
 			 App.footerRegion.show footerView 
 			 
 		getFooterView: (currentUser) -> 
