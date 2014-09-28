@@ -5,7 +5,7 @@
 
 	App = new Marionette.Application
 
-	App.rootRoute = "users"
+	App.rootRoute = Routes.users_path()
 
 	App.on "before:start", (options) ->
 		@currentUser = Backbone.Radio.request "global", "set:current:user", options.currentUser
@@ -26,5 +26,5 @@
 		if Backbone.history
 			Backbone.history.start()
 			@navigate(@rootRoute, trigger: true) if @getCurrentRoute() is ""
-			
+
 	App

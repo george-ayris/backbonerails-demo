@@ -19,6 +19,7 @@
 //= require lib/wreqr
 //= require lib/marionette
 //= require lib/radio.shim
+//= require js-routes
 //= require_tree ./backbone/config
 //= require backbone/app
 //= require_tree ./backbone/entities

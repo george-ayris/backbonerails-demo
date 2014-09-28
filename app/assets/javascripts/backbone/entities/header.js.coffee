@@ -1,7 +1,7 @@
 @Demo.module "Entities", (Entities, App, Backbone, Marionette, $, _) ->
-  
+
 	class Entities.Header extends Entities.Model
-    
+
 	class Entities.HeaderCollection extends Entities.Collection
 		model: Entities.Header
 
@@ -11,7 +11,7 @@
 				{ name: "Users" }
 				{ name: "Leads" }
 				{ name: "Apppointments" }
-			]      
-	
-	Backbone.Radio.reply "global", "header:entities", -> 
+			]
+
+	Backbone.Radio.reply "global", "header:entities", ->
 		API.getHeaders()
