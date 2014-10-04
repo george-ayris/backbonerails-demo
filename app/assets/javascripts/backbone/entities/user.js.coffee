@@ -10,13 +10,14 @@
 		setCurrentUser: (currentUser) ->
 			new Entities.User currentUser
 
-		getUserEntities: ->
+		getUserEntities: (cb) ->
 			users = new Entities.UsersCollection
-			users.fetch()
-			users
+			users.fetch
+				success: ->
+					cb users
 
 	Backbone.Radio.reply "global", "set:current:user", (currentUser) ->
 		API.setCurrentUser currentUser
 
-	Backbone.Radio.reply "global", "user:entities", ->
-		API.getUserEntities()
+	Backbone.Radio.reply "global", "user:entities", (cb) ->
+		API.getUserEntities cb

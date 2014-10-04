@@ -8,9 +8,9 @@
 	API =
 		getHeaders: ->
 			new Entities.HeaderCollection [
-				{ name: "Users" }
-				{ name: "Leads" }
-				{ name: "Apppointments" }
+				{ name: "Users", url: Routes.users_path() }
+				{ name: "Leads", url: "leads" }
+				{ name: "Apppointments", url: "appointments" }
 			]
 
 	Backbone.Radio.reply "global", "header:entities", ->
